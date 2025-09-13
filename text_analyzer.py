@@ -23,10 +23,7 @@ def analyze_text(file_name):
         else:
             word_count[word] = 1
     
-    long_words = []
-    for word in words:
-        if len(word) > 3:
-            long_words.append(word)
+    long_words = [word for word in words if len(word) > 3]
             
     print("The total number of words is: " + str(len(words)))
     print("The unique words count is: " + str(len(word_count)))
