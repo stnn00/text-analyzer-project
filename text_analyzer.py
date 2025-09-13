@@ -49,13 +49,11 @@ def analyze_text(file_name):
     top_words = frequent_words(word_count)
     long_words_list = count_long_words(words)
             
-    print("The total number of words is: " + str(len(words)))
-    print("The unique words count is: " + str(len(word_count)))
-    print("The most frequent words are:")
-    
-    for word, count in sorted(word_count.items(), key=lambda item: item[1], reverse=True)[:5]:
+    print(f"The total number of words is: {len(words)}")
+    print(f"The unique words count is: {len(word_count)}")
+    print(f"The most frequent words are: ")
+    for word, count in top_words:
         print(f"'{word}': {count}")
-    
-    print("Long words (more than 3 characters): " + str(len(long_words_list)))
+    print(f"Long words (more than 3 characters): {len(long_words_list)}")
 
 analyze_text("sample.txt")
