@@ -22,13 +22,7 @@ def analyze_text(file_name):
     
     words = text.lower().split()
     
-    word_count = {}
-    
-    for word in words:
-        if word in word_count:
-            word_count[word] = word_count[word] + 1
-        else:
-            word_count[word] = 1
+    word_count = Counter(words)
     
     long_words = [word for word in words if len(word) > 3]
             
