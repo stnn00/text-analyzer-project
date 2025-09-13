@@ -1,13 +1,20 @@
 # unpythonic_analyzer.py
 
 def analyze_text(file_name):
-    # This function is full of bad practices.
+    """
+    Reads the text file assigned and prints:
+    - Total number of words
+    - Amount of unique words
+    - Top 5 most frequent words
+    - Words longer than 3 characters
+
+    """
+    
     file = open(file_name, 'r')
     text = file.read()
     
     words = text.lower().split()
     
-    # Let's count the occurrences of each word.
     word_count = {}
     
     for word in words:
@@ -16,7 +23,6 @@ def analyze_text(file_name):
         else:
             word_count[word] = 1
     
-    # Now let's find the words with more than 3 characters.
     long_words = []
     for word in words:
         if len(word) > 3:
@@ -33,5 +39,4 @@ def analyze_text(file_name):
     
     file.close()
 
-# You will need to create a text file named 'sample.txt' for testing.
 analyze_text("sample.txt")
