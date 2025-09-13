@@ -1,5 +1,5 @@
 # text-analyzer-project README
-A Python script to calculate total amount of words in a .txt file, prints number of unique words, the frequency of each word, and the total of long words.
+A Python script to calculate total amount of words in a *.txt* file, prints number of unique words, the frequency of each word, and the total of long words.
 
 ## About text_analyzer.py
 *text_analyzer.py reads* a text file and prints:<br>
