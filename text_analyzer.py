@@ -56,4 +56,5 @@ def analyze_text(file_name):
         print(f"'{word}': {count}")
     print(f"Long words (more than 3 characters): {len(long_words_list)}")
 
-analyze_text("sample.txt")
+if __name__ == "__main__":
+    analyze_text("sample.txt")
