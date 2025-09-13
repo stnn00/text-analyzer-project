@@ -26,18 +26,12 @@ def count_word(words_list):
     """Counts the frequency of each word in words_list using Counter object."""
     return Counter(words_list)
 
-def frequent_words(word_count, n=5):
-    """Returns the top n most frequent words as a list of tuples (word, count).
-
-    n variable means number of items, can be replaced.
-    """
+def frequent_words(word_count, n=5): # n variable means number of items, can be replaced.
+    """Returns the top n most frequent words as a list of tuples (word, count)."""
     return word_count.most_common(n)
 
 def count_long_words(words_list, min_length=3):
-    """Counts and returns a list of words longer than min_length.
-
-    min_length: minimum length of words, default is 3.
-    """
+    """Counts and returns a list of words longer than min_length."""
     return [word for word in words_list if len(word) > min_length]
 
 def analyze_text(file_name):
@@ -51,7 +45,6 @@ def analyze_text(file_name):
     text = read_file(file_name)
     words = lowercase_words(text)
     word_count = count_word(words)
-
     top_words = frequent_words(word_count)
     long_words_list = count_long_words(words)
             
