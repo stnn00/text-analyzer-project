@@ -1,8 +1,8 @@
 Sample text to use in text_analyzer.py to determine the total number of words the unique word count the most frequent words and numbers with more than 3 characters
 Adding additional sample text to ensure python script output is correct and lowercases all words
-Rabbits
+Rabbits?
 Rabbits.
-RABbITS
+RABbITS!
 rabbits,
 RAbBITS
 rAbBitS,
