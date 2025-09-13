@@ -16,7 +16,9 @@ def read_file(file_name):
         return file.read()
 
 def lowercase_words(text):
-    """Converts string to lowercase and splits it into a list."""
+    """Converts string to lowercase, removes punctuation, and splits it into a list."""
+    for char in ".,/!?\:;'}{()[]<>|~@#$%^&*-_+=":
+        text = text.replace(char, "")
     return text.lower().split()
 
 def count_word(words_list):
