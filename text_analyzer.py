@@ -10,8 +10,8 @@ def analyze_text(file_name):
 
     """
     
-    file = open(file_name, 'r')
-    text = file.read()
+    with open(file_name, "r") as file:
+        text = file.read()
     
     words = text.lower().split()
     
@@ -36,7 +36,5 @@ def analyze_text(file_name):
         print(f"'{word}': {count}")
     
     print("Long words (more than 3 characters): " + str(len(long_words)))
-    
-    file.close()
 
 analyze_text("sample.txt")
