@@ -17,7 +17,8 @@ def read_file(file_name):
 
 def lowercase_words(text):
     """Converts string to lowercase, removes punctuation, and splits it into a list."""
-    for char in r".,/!?\:;'}{()[]<>|~@#$%^&*-_+=": # r string to ignore backslashes instead of interpreting as escape
+    punctuation = ".,/!?\:;'}{()[]<>|~@#$%^&*-_+="
+    for char in punctuation:
         text = text.replace(char, "")
     return text.lower().split()
 
