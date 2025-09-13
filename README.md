@@ -17,3 +17,13 @@ The script lowercases all words and removes punctuation to accurately count word
 ```python
 if __name__ == "__main__":
     analyze_text("your_file_name.txt")
+```
+
+## Key Refactoring Improvements
+
+- **PEP 8 compliance** - Adjusted naming conventions to follow PEP 8 guidelines.<br>
+- **Context Manager** - Replaced manual file handling `open()` and `close()` calls with `with` statements to implement automatic file handling and ensure proper management.<br>
+- **List Comprehensions** - Simplified the logic using `for` loops, to improve code readability.<br>
+- **`collections./Counter`** - Replaced manual word-counting loops with `Counter` for efficient calculation and to improve readability.<br>
+
+The refactoring improvements improved modularity, maintainable, and Pythonic, while retaining the script's intended functionality.
