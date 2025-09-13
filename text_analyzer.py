@@ -1,11 +1,14 @@
 """
 text_analyzer.py
 
-Reads a text file, prints total amount of words, frequency of each word, total of unique words, and long words.
+Reads a text file and prints:
+- Total amount of words
+- Number of unique words
+- Frequency of each word
+- Number of long words
 """
 
-from collections import Counter
-""" Collections is a built-in module in Python that allows us to have different kinds of data types to store, sort through, and utilize"""
+from collections import Counter # to replace manual word counting
 
 def read_file(file_name):
     """Reads the text file assigned and returns it as a string."""
@@ -51,7 +54,7 @@ def analyze_text(file_name):
             
     print(f"The total number of words is: {len(words)}")
     print(f"The unique words count is: {len(word_count)}")
-    print(f"The most frequent words are: ")
+    print(f"The most frequent words are:")
     for word, count in top_words:
         print(f"'{word}': {count}")
     print(f"Long words (more than 3 characters): {len(long_words_list)}")
