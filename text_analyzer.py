@@ -49,7 +49,7 @@ def analyze_text(file_name):
     top_words = frequent_words(word_count)
     long_words_list = count_long_words(words)
             
-    print("The total number of words is: {len(words)}")
+    print("The total number of words is: " + str(len(words)))
     print("The unique words count is: " + str(len(word_count)))
     print("The most frequent words are:")
     
