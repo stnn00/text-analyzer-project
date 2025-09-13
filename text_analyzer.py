@@ -1,4 +1,11 @@
-# unpythonic_analyzer.py
+"""
+text_analyzer.py
+
+Reads a text file, prints total amount of words, frequency of each word, total of unique words, and long words.
+"""
+
+from collections import Counter
+""" Collections is a built-in module in Python that allows us to have different kinds of data types to store, sort through, and utilize"""
 
 def analyze_text(file_name):
     """
