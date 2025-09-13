@@ -2,36 +2,36 @@
 
 def analyze_text(file_name):
     # This function is full of bad practices.
-    the_file = open(file_name, 'r')
-    the_text_content = the_file.read()
+    file = open(file_name, 'r')
+    text = file.read()
     
-    my_list = the_text_content.lower().split()
+    words = text.lower().split()
     
     # Let's count the occurrences of each word.
-    word_count_dict = {}
+    word_count = {}
     
-    for word_item in my_list:
-        if word_item in word_count_dict:
-            word_count_dict[word_item] = word_count_dict[word_item] + 1
+    for word in words:
+        if word in word_count:
+            word_count[word] = word_count[word] + 1
         else:
-            word_count_dict[word_item] = 1
+            word_count[word] = 1
     
     # Now let's find the words with more than 3 characters.
     long_words = []
-    for word_element in my_list:
-        if len(word_element) > 3:
-            long_words.append(word_element)
+    for word in words:
+        if len(word) > 3:
+            long_words.append(word)
             
-    print("The total number of words is: " + str(len(my_list)))
-    print("The unique words count is: " + str(len(word_count_dict)))
+    print("The total number of words is: " + str(len(words)))
+    print("The unique words count is: " + str(len(word_count)))
     print("The most frequent words are:")
     
-    for word, count in sorted(word_count_dict.items(), key=lambda item: item[1], reverse=True)[:5]:
+    for word, count in sorted(word_count.items(), key=lambda item: item[1], reverse=True)[:5]:
         print(f"'{word}': {count}")
     
     print("Long words (more than 3 characters): " + str(len(long_words)))
     
-    the_file.close()
+    file.close()
 
 # You will need to create a text file named 'sample.txt' for testing.
 analyze_text("sample.txt")
