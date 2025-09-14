@@ -42,7 +42,7 @@ def analyze_text(file_name):
     - Top frequent words
     - Total of long words
     """
-    text = read_file(file_name)
+    text = read_file(file_name) 
     words = lowercase_words(text)
     word_count = count_word(words)
     top_words = frequent_words(word_count)

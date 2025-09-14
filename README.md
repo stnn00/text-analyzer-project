@@ -10,6 +10,10 @@ A Python script to calculate total amount of words in a *.txt* file, prints numb
 
 The script lowercases all words and removes punctuation to accurately count words in a *.txt* file<br>
 
+## Demonstration
+Video on YouTube to demonstrate and explain python script (3:30)
+- https://youtu.be/mP4ChU7rsoU
+
 ## Instructions
 1. Set a *.txt* file to analyze (e.g., sample.txt). Place it in the same folder/directory path as *text_analyzer.py*<br>
 2. Run the script<br>
